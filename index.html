@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Lam | Portfolio</title>
+    <style>
+        :root {
+            --primary: #2d3748;
+            --secondary: #4a5568;
+            --accent: #3182ce;
+            --bg: #f7fafc;
+            --text: #1a202c;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { margin: 0.5rem 0 0; font-size: 1.2rem; opacity: 0.9; }
+        
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            display: block;
+            padding: 1rem;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a:hover { color: var(--accent); }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            color: var(--primary);
+            margin-top: 0;
+        }
+        h3 { color: var(--secondary); margin-bottom: 0.25rem; }
+        .date { color: #718096; font-size: 0.9rem; font-style: italic; margin-bottom: 0.5rem; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .card { background: var(--bg); padding: 1rem; border-radius: 6px; }
+        
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 0.5rem; }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary);
+            color: white;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Michael Lam</h1>
+        <p>Cerritos High School Student | Academic, Leader & Multi-Instrumentalist</p>
+        <p style="font-size: 1rem; margin-top: 1rem;">Contact: <a href="mailto:mlus3337@gmail.com" style="color: white; text-decoration: underline;">mlus3337@gmail.com</a></p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience & Leadership</a></li>
+            <li><a href="#skills">Skills & Hobbies</a></li>
+            <li><a href="#awards">Awards & Certifications</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="profile">
+            <h2>Profile</h2>
+            <p>Dedicated and open-minded student at Cerritos High School in Cerritos, CA, with a strong educational foundation built upon years of learning in Southern California. Possessing a genuine enthusiasm for knowledge and a commitment to continuous growth, coupled with a budding interest in politics and history demonstrated through personal initiatives.</p>
+            <p><strong>Typing Performance:</strong> 149 WPM Personal Record | 124 WPM Average.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <h3>Cerritos High School (Cerritos, CA)</h3>
+            <p class="date">Candidate for HS diploma — May 2026</p>
+            <ul>
+                <li>State Seal of Biliteracy, Chinese</li>
+                <li>State Seal of Civic Engagement</li>
+                <li><strong>CTE Pathway Completer:</strong> Biotech, Computer Science, and Digital Art</li>
+                <li><strong>Advanced Placement (AP) Coursework:</strong> Human Geography, Computer Science Principles, US History, Chinese, English Language, English Literature, Pre-Calculus, Statistics, Environmental Science, Psychology, Computer Science A</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience & Leadership</h2>
+
+            <article>
+                <h3>JC Culture Foundation (Cerritos, CA)</h3>
+                <p class="date">Management Intern, Dragon Dance Lead, Lion Dance Base, Core Performer | 2025 – Present</p>
+                <p>Administrative Intern in charge of writing emails, grant applications, and outreach for communities. Performed as a base in the Chinese Lion Dance, and as the Head of the Dragon Dance.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>Mark Pulido Political Campaign</h3>
+                <p class="date">Political and Campaign Intern | 2026</p>
+                <p>Assisted with tasks for each subcommittee involving media assets, poster distribution, and campaign execution strategy.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>Build Up (Cerritos, CA)</h3>
+                <p class="date">Chief Editor | 2025 – Present</p>
+                <p>Creating, editing, reviewing, and publishing company newsletters. Actively teaching financial literacy at local elementary schools and city colleges.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>Cerritos Chess Club / Project Chess Bridge</h3>
+                <p class="date">President and Founder / NGO Moderator | 2023 – Present</p>
+                <p>Delegating tasks to cabinet members, planning and coordinating the Spring 2024 and 2025 Chess tournaments. Moderating for Project Chess Bridge, an NGO aimed at providing free online chess coaching.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>SimplyCS (Cerritos, CA)</h3>
+                <p class="date">Club Management & Instructor | 2024 – 2026</p>
+                <p>Managing club members, raising money for charity causes, providing free computers to kids in need, teaching computer science courses, and helping develop summer camp curriculums.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>theCoderSchool (Cerritos, CA)</h3>
+                <p class="date">Intern | 2024 – 2025</p>
+                <p>Provided mentorship and student support for youth coding projects, troubleshooted bugs, and provided analytical guidance. Developed lesson plans, managed schedules, prepared programming materials, and communicated student progress with parents.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>ABC Codejam Board (ABC Unified School District, CA)</h3>
+                <p class="date">Finance Intern | 2022 – 2023</p>
+                <p>Managed strategic cold calling, professional emailing infrastructure for fundraising efforts, advertising, and marketing initiatives.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>Law Office of H. Ernie Nishii (Cerritos, CA)</h3>
+                <p class="date">Legal Intern</p>
+                <p>Participated comprehensively in Legal Discovery, studied case law, and helped draft formal questions.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>Project Betsy</h3>
+                <p class="date">Vice President / Project Architect, Initiator, Executioner | 2024</p>
+                <p>Worked directly alongside the High School Administration to install American Flags in the pursuit of patriotism and civic service.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>American Legion, Boys and Girls State (Sacramento)</h3>
+                <p class="date">County Delegate | 2025</p>
+                <p>Appointed to multiple roles including County Admin, Director of Tourism, County Doctor, Lawyer, and Party Campaign Coordinator. Executed county decisions, upheld law frameworks, maintained public mandate, and commanded the County Scout Troop.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>Class Committee, Cerritos High School</h3>
+                <p class="date">Commissioner of Publicity | 2025 – 2026</p>
+                <p>Focused on raising funds, creating graphic advertisements, and designing custom student merchandise.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>University of California, San Diego (UCSD) Future Leaders Summer Program</h3>
+                <p class="date">Delegate | Summer 2022</p>
+                <p>Collaborated intensively with fellow camp members to engineer realistic solutions to critical global problems during a 3-week program.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>City of Cerritos, CA</h3>
+                <p class="date">Volunteer | 2023 – 2026</p>
+                <p>Worked across various community events hosted by the city, including child care operations, arts/crafts workshops, cultural events, and youth sports events.</p>
+            </article>
+
+        </section>
+
+        <section id="skills">
+            <h2>Skills, Hobbies & Languages</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Music</h3>
+                    <p>13+ years of piano and violin with perfect pitch. Achieved the highest passing grade of "Distinction" twice and "Merit" twice from the Associated Board of the Royal Schools of Music (ABRSM). Member of the Cerritos Community Orchestra (2 years) and played with one of Mexico's Youth Orchestras. MTAC Level 6 State Honors Violin.</p>
+                </div>
+                <div class="card">
+                    <h3>Speech & Debate</h3>
+                    <p>Recipient of seven Model United Nations (MUN) Awards, including <strong>Best Delegate</strong> at the National High School MUN and VancouverMUN Crisis Committee. Young Legislator's Program Member (2024).</p>
+                </div>
+                <div class="card">
+                    <h3>Journalism</h3>
+                    <p>Runs a personal hobby blog-site with several analytical publications on Medium. Middle school roots in Yearbook, Journalism, and Broadcast production.</p>
+                </div>
+                <div class="card">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>English (Native/Fluent)</li>
+                        <li>Mandarin (Working Proficiency)</li>
+                        <li>Cantonese (Limited Understanding)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards">
+            <h2>Other Awards & Certifications</h2>
+            <div class="grid">
+                <div>
+                    <h3>Technical Certifications & Awards</h3>
+                    <ul>
+                        <li>IBM Cloud Computing Core Credential and Badge</li>
+                        <li>IBM Cloud Essentials V3 Certification</li>
+                        <li>Forti-Gate Operator Certification</li>
+                        <li>YouScience Certification: Digital Media 1</li>
+                        <li>YouScience Certification: Desktop Publishing</li>
+                        <li>Finalist Award: ABC Codejam (2024)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Civic & National Honors</h3>
+                    <ul>
+                        <li>NROTC Marine Scholarship Recipient</li>
+                        <li>Congressional Nomination for United States Military Academy (USMA) — Derek T. Tran</li>
+                        <li>Congressional Certificate of Special Recognition — Linda T. Sánchez</li>
+                        <li>Congressional Certificate of Recognition — Michelle Steel</li>
+                        <li>California Legislature Certificate of Recognition — Blanca Pacheco</li>
+                        <li>California Senatorial Certificate of Recognition — Bob J. Archuleta</li>
+                        <li>California Assembly Certificate — Sharon Quirk-Silva</li>
+                        <li>Certificate of Appreciation — American Legion, Norwalk Post 359</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Michael Lam. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
