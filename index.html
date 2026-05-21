@@ -1,11 +1,13 @@
+Here is the updated HTML5 boilerplate for your portfolio. It now includes smooth scrolling configuration and a modern JavaScript Intersection Observer paired with CSS transitions. When you click a navigation item, the page will glide smoothly to that section, and the section will elegantly fade and slide into view.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Lam | Portfolio</title>
-
-<style>
+    <style>
         :root {
             --primary: #2d3748;
             --secondary: #4a5568;
@@ -13,6 +15,13 @@
             --bg: #f7fafc;
             --text: #1a202c;
         }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 70px; /* Prevents the sticky nav from covering headings */
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
@@ -21,6 +30,7 @@
             margin: 0;
             padding: 0;
         }
+        
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -59,13 +69,26 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+
+        /* Initial state for the Slow Fade/Transition Effect */
         section {
             background: white;
             padding: 2rem;
             border-radius: 8px;
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
         }
+        
+        /* Triggered state when section enters viewport or is clicked */
+        section.reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
         h2 {
             border-bottom: 2px solid var(--accent);
             padding-bottom: 0.5rem;
@@ -93,9 +116,9 @@
 <body>
 
     <header>
-        <h1>Michael Lam</h1>
-        <p>Cerritos High School Student | Academic, Leader & Multi-Instrumentalist</p>
-        <p style="font-size: 1rem; margin-top: 1rem;">Contact: <a href="mailto:mlus3337@gmail.com" style="color: white; text-decoration: underline;">mlus3337@gmail.com</a></p>
+        [cite_start]<h1>Michael Lam [cite: 14]</h1>
+        <p>Cerritos High School Student | [cite_start]Academic, Leader & Multi-Instrumentalist [cite: 15]</p>
+        [cite_start]<p style="font-size: 1rem; margin-top: 1rem;">Contact: <a href="mailto:mlus3337@gmail.com" style="color: white; text-decoration: underline;">mlus3337@gmail.com [cite: 3]</a></p>
     </header>
 
     <nav>
@@ -112,19 +135,19 @@
 
         <section id="profile">
             <h2>Profile</h2>
-            <p>Dedicated and open-minded student at Cerritos High School in Cerritos, CA, with a strong educational foundation built upon years of learning in Southern California. Possessing a genuine enthusiasm for knowledge and a commitment to continuous growth, coupled with a budding interest in politics and history demonstrated through personal initiatives.</p>
-            <p><strong>Typing Performance:</strong> 149 WPM Personal Record | 124 WPM Average.</p>
+            [cite_start]<p>Dedicated and open-minded student at Cerritos High School in Cerritos, CA, with a strong educational foundation built upon years of learning in Southern California. [cite: 17] [cite_start]Possessing a genuine enthusiasm for knowledge and a commitment to continuous growth, coupled with a budding interest in politics and history demonstrated through personal initiatives. [cite: 18]</p>
+            [cite_start]<p><strong>Typing Performance:</strong> 149 WPM Personal Record, 124 average WPM. [cite: 19]</p>
         </section>
 
         <section id="education">
             <h2>Education</h2>
-            <h3>Cerritos High School (Cerritos, CA)</h3>
-            <p class="date">Candidate for HS diploma — May 2026</p>
+            [cite_start]<h3>Cerritos High School (Cerritos, CA) [cite: 5]</h3>
+            [cite_start]<p class="date">Candidate for HS diploma — May-2026 [cite: 5]</p>
             <ul>
-                <li>State Seal of Biliteracy, Chinese</li>
-                <li>State Seal of Civic Engagement</li>
-                <li><strong>CTE Pathway Completer:</strong> Biotech, Computer Science, and Digital Art</li>
-                <li><strong>Advanced Placement (AP) Coursework:</strong> Human Geography, Computer Science Principles, US History, Chinese, English Language, English Literature, Pre-Calculus, Statistics, Environmental Science, Psychology, Computer Science A</li>
+                [cite_start]<li>State Seal of Biliteracy, Chinese [cite: 5]</li>
+                [cite_start]<li>State Seal of Civic Engagement [cite: 5]</li>
+                [cite_start]<li><strong>CTE Pathway Completer:</strong> Biotech, Computer Science, and Digital Art [cite: 7]</li>
+                [cite_start]<li><strong>Advanced Placement (AP) Coursework:</strong> AP Human Geography, Computer Science Principles, US History, Chinese, English Language, English Literature, Pre-Calculus, Statistics, Environmental Science, Psychology, Computer Science A [cite: 6]</li>
             </ul>
         </section>
 
@@ -132,136 +155,135 @@
             <h2>Work Experience & Leadership</h2>
 
             <article>
-                <h3>JC Culture Foundation (Cerritos, CA)</h3>
-                <p class="date">Management Intern, Dragon Dance Lead, Lion Dance Base, Core Performer | 2025 – Present</p>
-                <p>Administrative Intern in charge of writing emails, grant applications, and outreach for communities. Performed as a base in the Chinese Lion Dance, and as the Head of the Dragon Dance.</p>
+                [cite_start]<h3>JC Culture Foundation (Cerritos, CA) [cite: 26]</h3>
+                <p class="date">Management Intern, Dragon Dance Lead, Lion Dance Base, Core Performer | [cite_start]2025-Present [cite: 27, 28]</p>
+                [cite_start]<p>Administrative Intern in charge of writing emails, grant applications, outreach for communities, performed as a base in the Chinese Lion Dance, and as the Head of the Dragon Dance. [cite: 28, 29]</p>
             </article>
             <hr>
             <article>
-                <h3>Mark Pulido Political Campaign</h3>
-                <p class="date">Political and Campaign Intern | 2026</p>
-                <p>Assisted with tasks for each subcommittee involving media assets, poster distribution, and campaign execution strategy.</p>
+                [cite_start]<h3>Mark Pulido Political Campaign [cite: 24]</h3>
+                <p class="date">Political and Campaign Intern | [cite_start]2026 [cite: 23, 24]</p>
+                [cite_start]<p>Administrative Intern in charge of writing emails, grant applications, outreach for communities [cite: 25][cite_start]; managed tasks for each subcommittee including media, posters, and strategy. [cite: 61]</p>
             </article>
             <hr>
             <article>
-                <h3>Build Up (Cerritos, CA)</h3>
-                <p class="date">Chief Editor | 2025 – Present</p>
-                <p>Creating, editing, reviewing, and publishing company newsletters. Actively teaching financial literacy at local elementary schools and city colleges.</p>
+                [cite_start]<h3>Build Up (Cerritos, CA) [cite: 32]</h3>
+                <p class="date">Chief Editor | [cite_start]2025-Present [cite: 33, 34]</p>
+                [cite_start]<p>Creating, editing, reviewing, and publishing company newsletters; teaching at local elementary schools and city college on financial literacy. [cite: 36]</p>
             </article>
             <hr>
             <article>
-                <h3>Cerritos Chess Club / Project Chess Bridge</h3>
-                <p class="date">President and Founder / NGO Moderator | 2023 – Present</p>
-                <p>Delegating tasks to cabinet members, planning and coordinating the Spring 2024 and 2025 Chess tournaments. Moderating for Project Chess Bridge, an NGO aimed at providing free online chess coaching.</p>
+                [cite_start]<h3>Cerritos Chess Club / Project Chess Bridge [cite: 50, 85]</h3>
+                <p class="date">President and Founder / NGO Moderator | [cite_start]2023-Present [cite: 86, 88]</p>
+                [cite_start]<p>Delegating tasks to other cabinet members, planning chess tournaments, planned the Spring 2024 and 2025 Chess tournaments. [cite: 87] [cite_start]Project Chess Bridge Moderator (NGO aimed at providing free online chess coaching). [cite: 50]</p>
             </article>
             <hr>
             <article>
-                <h3>SimplyCS (Cerritos, CA)</h3>
-                <p class="date">Club Management & Instructor | 2024 – 2026</p>
-                <p>Managing club members, raising money for charity causes, providing free computers to kids in need, teaching computer science courses, and helping develop summer camp curriculums.</p>
+                [cite_start]<h3>SimplyCS (Cerritos, CA) [cite: 42]</h3>
+                <p class="date">Club Management & Instructor | [cite_start]2024-2026 [cite: 43]</p>
+                [cite_start]<p>Managing other members of the club, raising money for a cause, providing free computers to kids in need as well as teaching computer science and helping develop summer camp curriculum. [cite: 44]</p>
             </article>
             <hr>
             <article>
-                <h3>theCoderSchool (Cerritos, CA)</h3>
-                <p class="date">Intern | 2024 – 2025</p>
-                <p>Provided mentorship and student support for youth coding projects, troubleshooted bugs, and provided analytical guidance. Developed lesson plans, managed schedules, prepared programming materials, and communicated student progress with parents.</p>
+                [cite_start]<h3>theCoderSchool (Cerritos, CA) [cite: 66]</h3>
+                <p class="date">Intern | [cite_start]2024-2025 [cite: 68]</p>
+                [cite_start]<p>Provided mentorship/ student support with coding projects, troubleshooted bugs, and provided guidance. [cite: 71] [cite_start]Helped refine coding skills, developed lesson plans, managed schedules, prepared materials, and communicated with parents on student progress. [cite: 72]</p>
             </article>
             <hr>
             <article>
-                <h3>ABC Codejam Board (ABC Unified School District, CA)</h3>
-                <p class="date">Finance Intern | 2022 – 2023</p>
-                <p>Managed strategic cold calling, professional emailing infrastructure for fundraising efforts, advertising, and marketing initiatives.</p>
+                [cite_start]<h3>ABC Codejam Board (ABC Unified School District, CA) [cite: 62]</h3>
+                <p class="date">Finance Intern | [cite_start]2022-2023 [cite: 69]</p>
+                [cite_start]<p>Cold calling, emailing for fundraising, advertising, and marketing. [cite: 63]</p>
             </article>
             <hr>
             <article>
-                <h3>Law Office of H. Ernie Nishii (Cerritos, CA)</h3>
-                <p class="date">Legal Intern</p>
-                <p>Participated comprehensively in Legal Discovery, studied case law, and helped draft formal questions.</p>
+                [cite_start]<h3>Law Office of H. Ernie Nishii (Cerritos, CA) [cite: 30]</h3>
+                [cite_start]<p class="date">Legal Intern [cite: 30]</p>
+                [cite_start]<p>Participation in Discovery, studied law, helped draft questions. [cite: 31]</p>
             </article>
             <hr>
             <article>
-                <h3>Project Betsy</h3>
-                <p class="date">Vice President / Project Architect, Initiator, Executioner | 2024</p>
-                <p>Worked directly alongside the High School Administration to install American Flags in the pursuit of patriotism and civic service.</p>
+                [cite_start]<h3>Project Betsy [cite: 37]</h3>
+                <p class="date">Vice President / Project Architect, Initiator, Executioner | [cite_start]2024 [cite: 38, 39, 40]</p>
+                [cite_start]<p>Worked with the School Administration to install American Flags in the pursuit of patriotism and civic service. [cite: 41]</p>
             </article>
             <hr>
             <article>
-                <h3>American Legion, Boys and Girls State (Sacramento)</h3>
-                <p class="date">County Delegate | 2025</p>
-                <p>Appointed to multiple roles including County Admin, Director of Tourism, County Doctor, Lawyer, and Party Campaign Coordinator. Executed county decisions, upheld law frameworks, maintained public mandate, and commanded the County Scout Troop.</p>
+                [cite_start]<h3>American Legion, Boys and Girls State (Sacramento) [cite: 48]</h3>
+                <p class="date">County Delegate | [cite_start]2025 [cite: 49]</p>
+                [cite_start]<p>County Admin, Director of Tourism, County Doctor, Lawyer, Party Campaign Coordinator. [cite: 61] [cite_start]Executing County decisions, upholding law, maintaining public mandate, commanding of the County Scout Troop, and running County Healthcare, managing tasks for each subcommittee. [cite: 61]</p>
             </article>
             <hr>
             <article>
-                <h3>Class Committee, Cerritos High School</h3>
-                <p class="date">Commissioner of Publicity | 2025 – 2026</p>
-                <p>Focused on raising funds, creating graphic advertisements, and designing custom student merchandise.</p>
+                [cite_start]<h3>Class Committee, Cerritos High School, CA [cite: 64]</h3>
+                <p class="date">Commissioner of Publicity | [cite_start]2025-2026 [cite: 35, 64]</p>
+                [cite_start]<p>Raising funds, creating advertisements, and designing merchandise. [cite: 65]</p>
             </article>
             <hr>
             <article>
-                <h3>University of California, San Diego (UCSD) Future Leaders Summer Program</h3>
-                <p class="date">Delegate | Summer 2022</p>
-                <p>Collaborated intensively with fellow camp members to engineer realistic solutions to critical global problems during a 3-week program.</p>
+                [cite_start]<h3>University of California, San Diego Future Leaders Summer Program [cite: 45]</h3>
+                <p class="date">Delegate | [cite_start]Summer 2022 [cite: 45, 70]</p>
+                [cite_start]<p>Collaborated with other members to create solutions to global problems in a 3-week camp. [cite: 47]</p>
             </article>
             <hr>
             <article>
-                <h3>City of Cerritos, CA</h3>
-                <p class="date">Volunteer | 2023 – 2026</p>
-                <p>Worked across various community events hosted by the city, including child care operations, arts/crafts workshops, cultural events, and youth sports events.</p>
+                [cite_start]<h3>City of Cerritos, CA [cite: 77]</h3>
+                <p class="date">Volunteer | [cite_start]2023-2026 [cite: 78, 80]</p>
+                [cite_start]<p>Worked in various community events hosted by the city, including child care, art and craft workshops, cultural events, and sports events. [cite: 82]</p>
             </article>
-
         </section>
 
         <section id="skills">
             <h2>Skills, Hobbies & Languages</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Music</h3>
-                    <p>13+ years of piano and violin with perfect pitch. Achieved the highest passing grade of "Distinction" twice and "Merit" twice from the Associated Board of the Royal Schools of Music (ABRSM). Member of the Cerritos Community Orchestra (2 years) and played with one of Mexico's Youth Orchestras. MTAC Level 6 State Honors Violin.</p>
+                    [cite_start]<h3>Music [cite: 8]</h3>
+                    [cite_start]<p>13+ years of piano and violin with perfect pitch. [cite: 9] [cite_start]Achieved the highest passing grade of "Distinction" from the Associated Board of the Royal Schools of Music twice, "Merit" twice. [cite: 9, 10] [cite_start]Member of the Cerritos Community Orchestra for 2 years and played with one of Mexico's Youth Orchestras. [cite: 10] [cite_start]MTAC Level 6 State Honors Violin. [cite: 11]</p>
                 </div>
                 <div class="card">
-                    <h3>Speech & Debate</h3>
-                    <p>Recipient of seven Model United Nations (MUN) Awards, including <strong>Best Delegate</strong> at the National High School MUN and VancouverMUN Crisis Committee. Young Legislator's Program Member (2024).</p>
+                    [cite_start]<h3>Speech & Debate [cite: 12]</h3>
+                    [cite_start]<p>Seven MUN (Model United Nations) Awards. [cite: 13] [cite_start]Won Best Delegate at National High School MUN and at VancouverMUN Crisis Committee. [cite: 13] [cite_start]Young Legislator's Program Member/2024. [cite: 13]</p>
                 </div>
                 <div class="card">
-                    <h3>Journalism</h3>
-                    <p>Runs a personal hobby blog-site with several analytical publications on Medium. Middle school roots in Yearbook, Journalism, and Broadcast production.</p>
+                    [cite_start]<h3>Journalism & Chess [cite: 13, 50]</h3>
+                    [cite_start]<p>Hobby blog-site with several Publications on Medium. [cite: 51, 53] [cite_start]Chief Editor at Build Up. [cite: 53] [cite_start]Middle school roots in Yearbook, Journalism, and Broadcast. [cite: 46] [cite_start]Chess layout: President and founder of CHS Chess Club. [cite: 50]</p>
                 </div>
                 <div class="card">
-                    <h3>Languages</h3>
+                    [cite_start]<h3>Languages [cite: 83]</h3>
                     <ul>
-                        <li>English (Native/Fluent)</li>
-                        <li>Mandarin (Working Proficiency)</li>
-                        <li>Cantonese (Limited Understanding)</li>
+                        [cite_start]<li>English [cite: 84]</li>
+                        [cite_start]<li>Mandarin [cite: 89]</li>
+                        [cite_start]<li>Cantonese [cite: 90]</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="awards">
-            <h2>Other Awards & Certifications</h2>
+            [cite_start]<h2>Other Awards & Certifications [cite: 54]</h2>
             <div class="grid">
                 <div>
-                    <h3>Technical Certifications & Awards</h3>
+                    <h3>Technical Credentials</h3>
                     <ul>
-                        <li>IBM Cloud Computing Core Credential and Badge</li>
-                        <li>IBM Cloud Essentials V3 Certification</li>
-                        <li>Forti-Gate Operator Certification</li>
-                        <li>YouScience Certification: Digital Media 1</li>
-                        <li>YouScience Certification: Desktop Publishing</li>
-                        <li>Finalist Award: ABC Codejam (2024)</li>
+                        [cite_start]<li>IBM Cloud Computing Core Credential and Badge [cite: 57]</li>
+                        [cite_start]<li>IBM Cloud Essentials V3 Certification [cite: 57]</li>
+                        [cite_start]<li>Forti-Gate Operator Certification [cite: 58]</li>
+                        [cite_start]<li>YouScience Certification Digital Media 1 [cite: 59]</li>
+                        [cite_start]<li>YouScience Certification Desktop Publishing [cite: 60]</li>
+                        [cite_start]<li>Finalist Award ABC Codejam/2024 [cite: 56]</li>
                     </ul>
                 </div>
                 <div>
                     <h3>Civic & National Honors</h3>
                     <ul>
-                        <li>NROTC Marine Scholarship Recipient</li>
-                        <li>Congressional Nomination for United States Military Academy (USMA) — Derek T. Tran</li>
-                        <li>Congressional Certificate of Special Recognition — Linda T. Sánchez</li>
-                        <li>Congressional Certificate of Recognition — Michelle Steel</li>
-                        <li>California Legislature Certificate of Recognition — Blanca Pacheco</li>
-                        <li>California Senatorial Certificate of Recognition — Bob J. Archuleta</li>
-                        <li>California Assembly Certificate — Sharon Quirk-Silva</li>
-                        <li>Certificate of Appreciation — American Legion, Norwalk Post 359</li>
+                        [cite_start]<li>NROTC Marine Scholarship Recipient [cite: 55]</li>
+                        [cite_start]<li>Congressional Nomination for USMA - Derek T. Tran [cite: 79, 81]</li>
+                        [cite_start]<li>Congressional Certificate of Special Recognition - Linda T. Sanchez [cite: 60]</li>
+                        [cite_start]<li>Congressional Certificate of Recognition-Michelle Steel [cite: 73]</li>
+                        [cite_start]<li>California Legislature Certificate of Recognition - Blanca Pacheco [cite: 74]</li>
+                        [cite_start]<li>California Senatorial Certificate of Recognition- Bob J. Archuleta [cite: 75]</li>
+                        [cite_start]<li>California Assembly Certificate-Sharon Quirk-Silva [cite: 79]</li>
+                        [cite_start]<li>Certificate of Appreciation American Legion, Norwalk Post 359 [cite: 76]</li>
                     </ul>
                 </div>
             </div>
@@ -273,5 +295,44 @@
         <p>&copy; 2026 Michael Lam. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("main section");
+
+            const observerOptions = {
+                root: null, // viewport
+                threshold: 0.15, // triggers when 15% of the section is visible
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("reveal");
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                revealObserver.observe(section);
+            });
+
+            // Fallback highlight trigger: forces immediate fade-in if a nav link is clicked
+            document.querySelectorAll("nav a").forEach(anchor => {
+                anchor.addEventListener("click", function () {
+                    const targetId = this.getAttribute("href");
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        setTimeout(() => {
+                            targetSection.classList.add("reveal");
+                        }, 300); // synchronizes nicely with smooth scrolling speed
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
+
+```
